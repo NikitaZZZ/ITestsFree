@@ -1,0 +1,8 @@
+#tests {
+    width: 80vw;
+    margin: auto;
+    border: 1px solid silver;
+    margin-top: 1em;
+    padding: 1em;
+    padding-right: 1.2em;
+}
