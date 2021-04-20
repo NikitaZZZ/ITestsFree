@@ -262,11 +262,6 @@ function answerQuestion(questionName) {
 }
 
 function checkTest(answer1Test, answer2Test, answer3Test, answer4Test) {
-    console.log(app.answers[0].first);
-    console.log(app.answers[0].second);
-    console.log(app.answers[0].third);
-    console.log(app.answers[0].fourth);
-
     if (app.answers[0].first <= 5) {
         Swal.fire({
             icon: 'info',
