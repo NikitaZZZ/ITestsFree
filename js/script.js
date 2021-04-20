@@ -111,17 +111,17 @@ let app = new Vue({
         createTest: function () {
             const testId = getRandId();
 
-            const answer1TestElem = document.getElementById('resultInput1').value;
-            const answer2TestElem = document.getElementById('resultInput2').value;
-            const answer3TestElem = document.getElementById('resultInput3').value;
-            const answer4TestElem = document.getElementById('resultInput4').value;
+            let answer1TestElem = document.getElementById('resultInput1').value;
+            let answer2TestElem = document.getElementById('resultInput2').value;
+            let answer3TestElem = document.getElementById('resultInput3').value;
+            let answer4TestElem = document.getElementById('resultInput4').value;
 
-            const inputText1Elem = document.getElementById('inputText1').value;
-            const inputText2Elem = document.getElementById('inputText2').value;
-            const inputText3Elem = document.getElementById('inputText3').value;
-            const inputText4Elem = document.getElementById('inputText4').value;
+            let inputText1Elem = document.getElementById('inputText1').value;
+            let inputText2Elem = document.getElementById('inputText2').value;
+            let inputText3Elem = document.getElementById('inputText3').value;
+            let inputText4Elem = document.getElementById('inputText4').value;
 
-            const inputQuestion = document.getElementById('inputQuestion').value;
+            let inputQuestion = document.getElementById('inputQuestion').value;
 
             firebase.database().ref(`testsFree/${testId}`).set({
                 id: testId,
@@ -262,6 +262,11 @@ function answerQuestion(questionName) {
 }
 
 function checkTest(answer1Test, answer2Test, answer3Test, answer4Test) {
+    console.log(app.answers[0].first);
+    console.log(app.answers[0].second);
+    console.log(app.answers[0].third);
+    console.log(app.answers[0].fourth);
+
     if (app.answers[0].first <= 5) {
         Swal.fire({
             icon: 'info',
